@@ -1,0 +1,33 @@
+@import '/src/assets/styles/abstracts/variables';
+
+p{@include font($body-font-family, $font-size-2, $color-6, $font-weight-medium, $line-height-6);
+ margin-left: 24px;
+}
+
+.pages__image {
+    padding: 8px 24px;
+  
+    @include box(24, 24);
+  }
+  
+  .page-item {
+      opacity: 73%;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      width: 240px;
+    
+      @include font($body-font-family, $font-size-2, $color-6, $font-weight-regular, $line-height-3);
+    
+      &.active {
+        background-color: $color-1;
+      }
+    }
+  
+  .feed {
+    height: 40px;
+  }
+  
+  a:hover{
+      background-color: $color-1;   
+  }

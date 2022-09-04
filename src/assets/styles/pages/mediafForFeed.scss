@@ -1,0 +1,65 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+	
+
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+    ._container{
+        max-width: 480px;
+        margin: 0px auto;
+        border: 1px solid #27AAF0;
+    }
+	img{
+        padding: 0;
+    }
+    .feedBlok{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #f02727;
+    }
+
+    .cardcontent_container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+
+    .tegs_container {border: 1px solid #b0920a;
+        padding-top: 1000px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .reactions_container{  border: 1px solid #b00a84;  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+    }
+    .avtorName{
+        padding-right: 10px;
+    }
+
+  h2{
+    position: relative;
+  }
+}

@@ -1,0 +1,40 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+	
+
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+    img{
+        width:400px;
+        height: 200px;
+        
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+   
+    h1{
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 50px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+}

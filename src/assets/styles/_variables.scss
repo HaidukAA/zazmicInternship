@@ -1,0 +1,82 @@
+/*Colors*/
+
+$background-color: #FAFAFA;
+$color-1: #27AAF0;
+$color-2: #A50104;
+$color-3: #FCBA04;
+$color-4: #696969;
+$color-5: #FFFFFF;
+$color-6: #313131;
+$color-7: #0D80BD;
+$color-8: #E5E5E5;
+$color-9: #000000;
+
+$color-transparent: rgba(49, 49, 49, 0.1);
+$color-1-transparent: rgba(49, 49, 49, 0.2);
+$color-2-transparent: rgba(49, 49, 49, 0.25);
+$color-3-transparent: rgba(0, 0, 0, 0.15);
+$color-4-transparent: rgba(39, 170, 240, 0.06);
+$color-5-transparent: rgba(39, 170, 240, 0.0006);
+$color-6-transparent: rgba(49, 49, 49, 0.15);
+
+/*Fonts*/
+
+$body-font-family: quicksand, sans-serif;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$font-size-1: 12px;
+$font-size-2: 14px;
+$font-size-3: 16px;
+$font-size-4: 18px;
+$font-size-5: 20px;
+$font-size-6: 21px;
+$font-size-7: 24px;
+$font-size-8: 34px;
+$font-size-9: 40px;
+$font-size-10: 48px;
+$font-size-11: 72px;
+
+$line-height-1: 16px;
+$line-height-2: 18px;
+$line-height-3: 20px;
+$line-height-4: 24px;
+$line-height-5: 32px;
+$line-height-6: 36px;
+$line-height-7: 50px;
+$line-height-8: 72px;
+$line-height-9: 108px;
+
+@mixin font($font-family, $font-size, $font-color, $font-weight, $line-height) {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $font-color;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin font-opacity($font-color, $font-opacity) {
+  color: $font-color;
+  opacity: $font-opacity;
+}
+
+/*Dimensions and display method*/
+
+@mixin box($width, $height) {
+  width: $width * 1px;
+  height: $height * 1px;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}

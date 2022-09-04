@@ -1,0 +1,35 @@
+@import '/src/assets/styles/abstracts/variables';
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 240px;
+  background-color:  $color-5;
+  box-shadow: 0 0 10px rgb(229 229 229 / 5%);
+}
+
+
+.container__top {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $color-6-transparent;
+}
+
+.container__pages {
+    margin-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $color-6-transparent;
+  }
+
+.container__categories{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $color-6-transparent;
+}
+
+
+
+
+

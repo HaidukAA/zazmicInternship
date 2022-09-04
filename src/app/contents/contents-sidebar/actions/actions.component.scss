@@ -1,0 +1,25 @@
+@import '/src/assets/styles/abstracts/variables';
+
+p{@include font($body-font-family, $font-size-2, $color-6, $font-weight-medium, $line-height-6);
+ margin-left: 24px;
+}
+
+img{
+    padding: 11px 11px;
+}
+
+.page-item {
+    opacity: 73%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 240px;
+    margin-left: 13px;
+    @include font($body-font-family, $font-size-2, $color-6, $font-weight-regular, $line-height-3);
+    margin-bottom: 8px;
+  }
+
+
+  .page-item:hover{
+    background-color: $color-1;
+}

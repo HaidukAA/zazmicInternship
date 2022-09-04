@@ -1,0 +1,31 @@
+<div [ngClass]="typeView" *ngFor="let article of articles" > 
+                            
+    <img src= {{article.imageArticle}}>
+                
+    <div class="cardcontent">
+                
+        <div class="tegs_container">
+            <a href="" >{{ article.tegs.tegOne }}</a>
+            <a href="" >{{ article.tegs.tegTwo }}</a>
+        </div>
+            
+        <div>
+            <h2 >{{ article.title }}</h2>  
+            <p>{{ article.caption }}</p>
+        </div>
+                    
+        <div class="caption_container">
+             
+            <div class="author_container">
+                <img class="authorImg" src= {{article.imageUser}}>
+                <a class="avtorName" href="">{{article.nameUser}}</a>
+            </div>
+            
+            <ul class="reactions_container">
+                <img class="reactionsImg" src="../../../../assets/images/svg/news-feed/heart.svg" alt="kudos">
+                <li class="reactionsText">{{article.kudos}}</li>
+                <li><img class="reactionsImg" src="../../../../assets/images/svg/news-feed/star.svg" alt="star"></li>
+            </ul>
+        </div>
+    </div>
+</div>

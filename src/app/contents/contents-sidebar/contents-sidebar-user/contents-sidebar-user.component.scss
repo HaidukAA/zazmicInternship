@@ -1,0 +1,36 @@
+@import '/src/assets/styles/abstracts/variables';
+
+.container__user {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $color-6-transparent;
+  }
+  
+.user__photo {
+    background-color: $color-1;
+    border-radius: 20px;
+    margin: 8px 16px;
+    justify-content: center;
+  
+    @include box(40, 40);
+    @include flex-center;
+  }
+  
+.image {
+    @include box(18, 20);
+  }
+
+.page-item {
+  opacity: 73%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: 240px;
+
+  @include font($body-font-family, $font-size-2, $color-6, $font-weight-regular, $line-height-3);
+
+  &.active {
+    background-color: $color-1;
+  }
+}
+

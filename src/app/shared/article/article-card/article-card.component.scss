@@ -1,0 +1,220 @@
+@import "/src/assets/styles/abstracts/variables";
+@import "/src/assets/styles/base/_null.scss";
+
+.feedBlokTitlesView{
+    display: flex;
+    flex-direction: column;;
+    max-width: 476px;
+    box-shadow: 0px 2px 8px $color-3-transparent;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    
+    img{
+        display: flex;
+        max-height: 200px;
+        object-fit: cover;
+        max-width: 476px;
+    }
+
+    div{margin-left: 10px;}
+   
+}
+
+.feedBlokDefaultView{
+    display: flex;
+    flex-direction: column;
+    max-width: 476px;
+    box-shadow: 0px 2px 8px $color-3-transparent;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    
+    
+    img{
+        display: flex;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    div{margin-left: 10px;
+    margin-right: 10px;}
+}
+
+.feedBlokDefaultView:first-child{
+    flex-direction: row;
+    max-width: 972px;
+
+    div{width: 325px;}
+
+    img{
+        object-fit: fill;
+        max-height: 388px;
+        max-width: 629px;
+    }
+
+    p{margin-bottom: 135px;}
+  
+}
+
+.feedBlokDefaultView:last-child{
+    flex-direction: column;
+    max-width: 972px;
+    div{width: 962px;}
+    a:last-child{
+        margin-right: 640px;
+    }
+}
+
+.feedBlokListView{
+    display: flex;
+    box-shadow: 0px 2px 8px $color-3-transparent;
+    margin-bottom: 40px;
+    margin-right: 10px;
+    max-width: 992px;
+
+    img{
+        display: flex;
+        margin-right: 32px;
+        width: 320px; 
+    }
+
+    ul{ 
+        width: 400px;}
+
+        
+}
+
+
+.tegs_container {
+    margin-top: 24px;
+    display: flex;
+}
+
+a{
+    display: flex;
+    background: $color-transparent;
+    border-radius: 12px;
+    padding: 0 12px  0 12px; 
+    margin-right: 8px;  
+    @include font($body-font-family, $font-size-2, $color-6, $font-weight-regular, $line-height-2);
+}
+
+a:hover, .buttonLoad:hover {
+    background: $color-1;
+    
+}
+
+.reactionsImg:hover {
+    background:$color-1;
+    border-radius: 100%;
+
+}
+
+ .avtorName:hover, h2:hover {
+    background: none;
+    color: $color-1;
+    cursor: pointer;
+}
+
+h2{
+    margin-top: 12px;
+    @include font($body-font-family, $font-size-5, $color-6, $font-weight-bold, $line-height-4);
+}
+
+p{
+    @include font($body-font-family, $font-size-2, $col-light, $font-weight-regular, $line-height-3);
+    margin-top: 12px;
+    margin-right: 35px;
+}
+
+.caption_container{ 
+    margin-top: 41px;
+    display: flex;
+    align-items: center;  
+    margin-bottom: 24px;  
+    justify-content: space-between;
+    max-width: 616px;
+    
+}
+
+.author_container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0px !important;
+
+}
+
+.reactions_container{    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 24px;
+    
+}
+
+
+
+.avtorName{
+    
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 0;
+    background: none;
+    border-radius: 0;
+    text-align: center;   
+   width: 147px;
+}
+
+.reactionsText{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $reactionsText;
+    border-right: 1px solid $color-1-transparent;
+    padding-right: 8px;
+    padding-left: 4.5px;
+    
+    
+}
+
+.authorImg{ 
+    margin-right: 0px !important;
+    border-radius: 20px!important;
+    padding-right: 0!important;
+    max-width: 40px!important;
+    width: 34px!important;
+    height: 34px!important;   
+}
+
+.reactionsImg{
+    margin-left: 8px!important;
+    padding-right: 0px!important;
+    margin-right: 0px !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.buttonLoad{
+    padding: 8px 90px 8px 89px;
+    background: $color-1;
+    border-radius: 20px;
+    text-align: center; 
+    margin: auto auto 410px 348px ;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: $background-color;
+    border-color: $color-1;
+}
+
+
+.loadIMG{
+    padding-right: 8px;
+}
+
+.cardcontent{
+    display: flex;
+    flex-direction: column;
+}
