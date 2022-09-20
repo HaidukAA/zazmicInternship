@@ -1,0 +1,54 @@
+@import '/src/assets/styles//abstracts/variables';
+@import '/src/assets/styles/base/null';
+
+button{
+    
+    padding: 6px 71px 6px 71px;
+    background: $color-1;
+    border-radius: 20px;
+    text-align: center; 
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: $background-color;
+}
+
+button:hover {
+    background: $color-7;
+    
+}
+
+.container {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    @include flex-center;
+  
+    img {
+        max-height: 508px;
+  
+  
+      @include box(1216, 608);
+  
+      @media (max-width: 1270px) {
+        @include box(1000, 500);
+      }
+  
+      @media (max-width: 1100px) {
+        @include box(950, 475);
+      }
+  
+      @media (max-width: 1050px) {
+        @include box(850, 425);
+      }
+  
+      @media (max-width: 900px) {
+        @include box(800, 400);
+      }
+    }
+  }

@@ -1,12 +1,12 @@
-<div [ngClass]="typeView" *ngFor="let article of articles" > 
+<div [ngClass]="typeView" *ngFor="let article of articles" appHover> 
                             
     <img src= {{article.imageArticle}}>
                 
     <div class="cardcontent">
                 
-        <div class="tegs_container">
-            <a href="" >{{ article.tegs.tegOne }}</a>
-            <a href="" >{{ article.tegs.tegTwo }}</a>
+        <div class="tags_container">
+            <app-tags [name]='article.tags.tagOne'></app-tags>
+            <app-tags [name]='article.tags.tagTwo'></app-tags> 
         </div>
             
         <div>
@@ -14,18 +14,13 @@
             <p>{{ article.caption }}</p>
         </div>
                     
-        <div class="caption_container">
-             
-            <div class="author_container">
-                <img class="authorImg" src= {{article.imageUser}}>
-                <a class="avtorName" href="">{{article.nameUser}}</a>
-            </div>
-            
-            <ul class="reactions_container">
-                <img class="reactionsImg" src="../../../../assets/images/svg/news-feed/heart.svg" alt="kudos">
-                <li class="reactionsText">{{article.kudos}}</li>
-                <li><img class="reactionsImg" src="../../../../assets/images/svg/news-feed/star.svg" alt="star"></li>
-            </ul>
+        <div>
+         <app-article-reaction 
+            class="caption_container"
+            [imageUser]='article.imageUser'
+            [nameUser]='article.nameUser'
+            [kudos]='article.kudos'>
+         </app-article-reaction>
         </div>
     </div>
 </div>

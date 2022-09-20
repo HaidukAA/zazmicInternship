@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
+  // tslint:disable-next-line: no-empty
   constructor() { }
 
+  // tslint:disable-next-line: no-empty
   ngOnInit(): void {
   }
 

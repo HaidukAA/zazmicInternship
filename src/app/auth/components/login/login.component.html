@@ -1,0 +1,41 @@
+<div class="container">
+
+  <div class="container__login-block">
+
+    <form  [formGroup]="form" name="personalForm" (ngSubmit)="onSubmit()" class="form">
+
+      <h1 class="form__title" >LOGIN</h1>
+  
+      <app-input
+        class="inputNameField"
+        [groupName]="form" 
+        controlName="name" 
+        [typeInput]='name' 
+        [label]='labelName' 
+        [helperText]='helperUserNameText'
+        [inputSVG]='userSVG'
+      ></app-input>
+      <app-input 
+        [groupName]="form" 
+        controlName="password" 
+        [typeInput]='passwordType' 
+        [label]='labelPassword' 
+        [helperText]='helperUserPasswordText'
+        [inputSVG]='passwordSVG'
+        class="password-field"
+      ></app-input>
+      
+      <app-button class="button-svg" [buttonSVG]='buttonSVG' [ngClass]="{ 'disabled' : disable }" [typeButton]='typeButton' [name]='button'></app-button>
+
+      <label class="checkbox"> Remember me
+        <input type="checkbox" id="" name="" />
+        <span class="checkbox-text"></span>
+      </label>
+    </form>
+  
+  </div>
+
+  <app-hello-block></app-hello-block>
+  <app-navigation></app-navigation>
+  <app-logo ></app-logo>
+</div>

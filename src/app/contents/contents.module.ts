@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarModule } from './contents-sidebar/sidebar.module';
-import { ArticlesModule } from './articles/articles.module';
 import { ContentsRoutingModule } from './contents-routing.module';
+import { ContensComponent } from './contens.component';
+import { RouterModule } from '@angular/router';
+import { articles } from '../common/models/moockdata/data.moock';
+import { ArticlesModule } from './articles/articles.module';
 
-
+import {MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
-  declarations: [],
+  declarations: [ContensComponent],
   imports: [
     CommonModule,
-    ArticlesModule,
     SidebarModule,
-    ContentsRoutingModule
+    ContentsRoutingModule,
+    RouterModule,
+    ArticlesModule,
+    MatNativeDateModule
   ]
 })
 export class ContentsModule { }

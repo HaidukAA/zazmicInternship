@@ -8,9 +8,11 @@ import { Router } from '@angular/router';
 })
 export class ViewComponent implements OnInit {
 
+  // tslint:disable-next-line: no-empty
   constructor() { }
 
 
+  // tslint:disable-next-line: no-empty
   ngOnInit(): void {
   }
 

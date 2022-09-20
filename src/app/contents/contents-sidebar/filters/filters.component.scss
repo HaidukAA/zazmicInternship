@@ -4,12 +4,6 @@ p{@include font($body-font-family, $font-size-2, $color-6, $font-weight-medium, 
  margin-left: 24px;
 }
 
-.pages__image {
-    padding: 8px 24px;
-  
-    @include box(24, 24);
-  }
-  
   .page-item {
       opacity: 73%;
       display: flex;
@@ -24,10 +18,7 @@ p{@include font($body-font-family, $font-size-2, $color-6, $font-weight-medium, 
       }
     }
   
-  .feed {
-    height: 40px;
-  }
-  
-  a:hover{
-      background-color: $color-1;   
-  }
+
+
+
+

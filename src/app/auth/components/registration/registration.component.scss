@@ -1,0 +1,119 @@
+@import '/src/assets/styles/abstracts/variables';
+
+.container {
+  width: 1500px;
+  height: 100%;
+  background-image: url('/assets/images/pictures/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 1500px) {
+    width: 1300px;
+  }
+
+  @media (max-width: 1300px) {
+    width: 1100px;
+  }
+
+  @media (max-width: 1100px) {
+    width: 900px;
+  }
+
+  &__login-block {
+    width: 440px;
+    height: 100%;
+    background-color: $color-5;
+    position: fixed;
+    right: 0px;
+    justify-content: center;
+
+    @include flex-center;
+
+    
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include box(344, 380);
+
+      &__title {
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+
+        @include font($body-font-family, $font-size-7, $color-1, $font-weight-bold, $line-height-6);
+      }
+
+      .inputMailField {
+        margin-bottom: 32px;
+      }
+
+      .password-field {
+        margin-bottom: 40px;
+      }
+
+      .checkbox {
+        margin-top: 24px;
+        height: 24px;
+        align-self: flex-end;
+        display: flex;
+        position: relative;
+        padding-left: 35px;
+        cursor: pointer;
+
+        @include font($body-font-family, $font-size-3, $color-9, $font-weight-regular, $line-height-4);
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+
+        .checkbox-text {
+          position: absolute;
+          top: -2px;
+          left: 0;
+          background-color: $color-5;
+          border: 1px solid $color-1;
+          border-radius: 2px;
+
+          @include box(24, 24);
+        }
+
+        input:checked ~ .checkbox-text {
+          background-color: $color-5;
+        }
+      }
+    }
+  }
+}
+
+.checkbox input:checked ~ .checkbox-text:after {
+  display: block;
+}
+
+.checkbox .checkbox-text:after {
+  left: 9px;
+  top: 5px;
+  border: solid $color-1;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: "";
+  position: absolute;
+  display: none;
+
+  @include box(5, 10);
+}
+
+.passwordErr{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: $color-2;
+}

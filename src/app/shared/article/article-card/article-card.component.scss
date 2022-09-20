@@ -6,7 +6,7 @@
     flex-direction: column;;
     max-width: 476px;
     box-shadow: 0px 2px 8px $color-3-transparent;
-    margin-bottom: 20px;
+    margin-bottom: 20px!important;
     margin-right: 20px;
     
     img{
@@ -25,7 +25,7 @@
     flex-direction: column;
     max-width: 476px;
     box-shadow: 0px 2px 8px $color-3-transparent;
-    margin-bottom: 20px;
+    margin-bottom: 20px!important;
     margin-right: 20px;
     
     
@@ -37,6 +37,7 @@
 
     div{margin-left: 10px;
     margin-right: 10px;}
+    app-article-reaction{min-width: 460px;}
 }
 
 .feedBlokDefaultView:first-child{
@@ -52,7 +53,9 @@
     }
 
     p{margin-bottom: 135px;}
-  
+
+    app-article-reaction{min-width: 335px;}
+     
 }
 
 .feedBlokDefaultView:last-child{
@@ -67,9 +70,9 @@
 .feedBlokListView{
     display: flex;
     box-shadow: 0px 2px 8px $color-3-transparent;
-    margin-bottom: 40px;
+    margin-bottom: 20px!important;
     margin-right: 10px;
-    max-width: 992px;
+    max-width: 972px;
 
     img{
         display: flex;
@@ -79,12 +82,18 @@
 
     ul{ 
         width: 400px;}
-
+    
+    app-article-reaction{min-width: 630px;}
         
 }
 
+.hoverDirective{
+    transform: scale(1.05);
+    transition: .5s all;
+    z-index: 1000;
+}
 
-.tegs_container {
+.tags_container {
     margin-top: 24px;
     display: flex;
 }
@@ -103,18 +112,6 @@ a:hover, .buttonLoad:hover {
     
 }
 
-.reactionsImg:hover {
-    background:$color-1;
-    border-radius: 100%;
-
-}
-
- .avtorName:hover, h2:hover {
-    background: none;
-    color: $color-1;
-    cursor: pointer;
-}
-
 h2{
     margin-top: 12px;
     @include font($body-font-family, $font-size-5, $color-6, $font-weight-bold, $line-height-4);
@@ -127,72 +124,12 @@ p{
 }
 
 .caption_container{ 
-    margin-top: 41px;
+    margin-top: 36px;
     display: flex;
     align-items: center;  
     margin-bottom: 24px;  
     justify-content: space-between;
-    max-width: 616px;
-    
-}
-
-.author_container{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 0px !important;
-
-}
-
-.reactions_container{    
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 24px;
-    
-}
-
-
-
-.avtorName{
-    
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    padding-bottom: 0;
-    background: none;
-    border-radius: 0;
-    text-align: center;   
-   width: 147px;
-}
-
-.reactionsText{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: $reactionsText;
-    border-right: 1px solid $color-1-transparent;
-    padding-right: 8px;
-    padding-left: 4.5px;
-    
-    
-}
-
-.authorImg{ 
-    margin-right: 0px !important;
-    border-radius: 20px!important;
-    padding-right: 0!important;
-    max-width: 40px!important;
-    width: 34px!important;
-    height: 34px!important;   
-}
-
-.reactionsImg{
-    margin-left: 8px!important;
-    padding-right: 0px!important;
-    margin-right: 0px !important;
-    width: 20px !important;
-    height: 20px !important;
+    margin-left: 0px;
 }
 
 .buttonLoad{

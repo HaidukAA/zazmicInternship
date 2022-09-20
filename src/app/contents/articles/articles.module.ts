@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArtilesFeedComponent } from './articles-feed/artiles-feed.component';
-import { ArticleCardComponent } from 'src/app/shared/article/article-card/article-card.component';
-
-
+import { ArticlesRoutingModule } from './articles-routing.module';
+import { ArticleCardModule } from 'src/app/shared/article/article-card/article-card.module';
 
 @NgModule({
   declarations: [
-    ArtilesFeedComponent,
-    ArticleCardComponent 
-  ],
+    ArtilesFeedComponent],
   imports: [
     CommonModule,
+    ArticlesRoutingModule,
+    ArticleCardModule
   ],
   exports:[ArtilesFeedComponent]
 })

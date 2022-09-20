@@ -1,0 +1,28 @@
+<mat-form-field appearance="fill" class="form">
+
+  <mat-label><img class="pages__image" src="/assets/images/svg/sidebar/Byauthor.svg"/>By tegs</mat-label>
+
+  <mat-select multiple  [formControl]="toppings" disableOptionCentering panelClass="select-panel">    
+
+    <input matInput placeholder="Search tags..." class="findTeg">
+
+    <div class="line"></div>
+
+    <mat-select-trigger>
+      {{toppings.value?.[0] || ''}}
+      <span *ngIf="(toppings.value?.length || 0) > 1" class="example-additional-selection">
+        (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+      </span>
+    </mat-select-trigger>
+    <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+   
+    <div class="line"></div>
+
+    <div class="button_container">
+      <a class="button">RESET ALL</a>
+      <a class="button">SAVE FILTERS</a>
+    </div>
+   
+  </mat-select>
+
+</mat-form-field>

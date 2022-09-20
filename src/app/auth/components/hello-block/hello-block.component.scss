@@ -1,0 +1,41 @@
+@import '/src/assets/styles/abstracts/variables';
+
+.container {
+  position: fixed;
+  top: 262px;
+  left: 200px;
+
+  @include box(520, 278);
+
+  .welcome {
+    opacity: 34%;
+    margin: 0px;
+  
+    @include box(262, 72);
+    @include font($body-font-family, $font-size-10, $color-5, $font-weight-light, $line-height-8);
+  }
+
+  .title {
+    margin-top: 24px;
+    margin: 0px;
+  
+    @include box(271, 108);
+    @include font($body-font-family, $font-size-11, $color-5, $font-weight-medium, $line-height-9);
+  }
+
+  .description {
+    opacity: 74%;
+    margin-top: 20px;
+  
+    @include box(520, 54);
+    @include font($body-font-family, $font-size-4, $color-5, $font-weight-regular, $line-height-4);
+
+    @media (max-width: 1150px) {
+      width: 300px;      
+    }
+  }
+
+  @media (max-width: 1300px) {
+    left: 100px;
+  }
+}

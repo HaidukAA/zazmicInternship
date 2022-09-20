@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contents-sidebar-user.component.scss']
 })
 export class ContentsSidebarUserComponent implements OnInit {
-
+// tslint:disable-next-line: no-empty
   constructor() { }
-
+// tslint:disable-next-line: no-empty
   ngOnInit(): void {
   }
 

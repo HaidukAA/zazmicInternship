@@ -1,0 +1,173 @@
+@import '/src/assets/styles/abstracts/variables';
+
+::ng-deep .mat-form-field-underline{display: none !important;}
+
+::ng-deep .findTeg{
+    width: 242px !important;
+    background: $color-transparent !important;
+    border-radius: 12px!important;
+    margin: 12px 12px 12px 12px!important;
+    height: 24px !important;
+    border: none !important;
+    @include font($body-font-family !important, $font-size-2 !important, $color-6 !important, $font-weight-regular !important, $line-height-3 !important);
+}
+
+::ng-deep .tegsCheck{
+    width: 242px !important;
+    height: 24px !important;
+    border-radius: 12px;
+    margin: 12px 12px 12px 12px;
+}
+
+.line{
+    border: 1px solid $color-transparent;
+    transform: rotate(-0.24deg); 
+}
+
+ .button{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 24px;
+    background-color: $background-color;
+    border-radius: 0 !important;
+    margin-top: 12px !important;
+    border-radius: 12px !important; 
+    padding: 0 8px 0 8px!important;
+    @include font($body-font-family, $font-size-2, $color-6, $font-weight-regular, $line-height-3);
+}
+
+::ng-deep .pages-item{ 
+    @include font($body-font-family, $font-size-2, $color-6, $font-weight-regular, $line-height-3);
+}
+
+.button:hover{
+  color: $color-5;
+  background-color: $color-1;
+}
+
+::ng-deep .mat-pseudo-checkbox{ 
+    display: none !important; 
+}
+
+.button_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+::ng-deep .mat-select-arrow { 
+    display: none !important;
+}
+
+::ng-deep .mat-form-field-wrapper {
+    @include font($body-font-family, $font-size-2, $color-5, $font-weight-regular, $line-height-3);
+    padding: 0px !important;
+    margin: 0px !important;
+    background: $background-color !important; 
+}
+
+::ng-deep .mat-form-field-flex{
+    background-color: $color-5 !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+::ng-deep .mat-select-placeholder{    
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+::ng-deep .mat-form-field-infix{
+    padding: 0px !important;
+    margin: 0px !important;
+    min-width: 240px !important;
+}
+
+::ng-deep .mat-form-field-infix:hover{
+    background-color: $color-1; 
+
+  }
+
+  ::ng-deep  .mat-form-field{
+    display: flex !important;
+
+  }
+
+  ::ng-deep .mat-select-panel{
+    max-height: auto !important;
+    min-height: 300px !important;
+    max-width: 240px !important;
+    position: relative;
+    left: 260px !important;
+    overflow-x: hidden !important;;
+}
+
+.pages__image {
+    padding: 0px 24px 8px 24px !important;
+    @include box(24, 24);
+  }
+
+  ::ng-deep .mat-form-field-label-wrapper{
+    display: flex;
+    padding-top: 0px;
+    height: 40px !important;
+    align-items: center; 
+  }
+
+  ::ng-deep .ng-star-inserted{
+    display: flex;
+    margin-bottom: 8px !important;
+    @include font($body-font-family!important, $font-size-2!important, $color-6!important, $font-weight-regular!important, $line-height-3!important);
+  }
+
+  ::ng-deep .mat-select-trigger{
+    margin-left: 54px!important; 
+}
+
+::ng-deep .ng-trigger{
+    max-width: 215px !important;
+
+}
+
+::ng-deep .mat-active, .mat-focus-indicator:hover{
+    background-color: $color-1 !important;     
+    border-radius: 12px;
+    color: $color-5 !important; 
+}
+
+::ng-deep .mat-pseudo-checkbox-checked:checked{
+    background-color: $color-1 !important;   
+    border-radius: 12px;
+}
+
+::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    background-color: $color-1;
+    border-radius: 12px;
+ 
+}
+
+::ng-deep .mat-option-text{
+    @include font($body-font-family, $font-size-2, $color-6, $font-weight-regular, $line-height-3);
+    border-radius: 12px;
+}
+::ng-deep .mat-option-text:hover{ color: $color-5 !important; }
+
+
+::ng-deep .mat-option{
+    @include font($body-font-family, $font-size-2, $color-6, $font-weight-regular, $line-height-3);
+    background: $color-transparent;
+    border-radius: 12px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    height: 24px !important;
+    width: 250px !important;
+    margin-top: 8px !important;
+}
+
+::ng-deep .mat-selected .mat-option-text {
+    color: $color-5!important;
+}
+
+
+

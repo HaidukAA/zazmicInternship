@@ -1,0 +1,25 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "class-name": false,
+        "max-classes-per-file": false,
+        "no-console": false,
+        "no-empty-interface": false,
+        "unified-signatures": false,
+        "ban-types": false,
+        "jsdoc-format": false,
+        "no-trailing-spaces": false,
+        "callable-types": false,
+        "no-trailing-whitespace": false,
+        "array-type": false,
+        "no-namespace": false,
+        "no-misused-new": false,
+        "disable-next-line": false
+    },
+    "rulesDirectory": []
+    
+} 

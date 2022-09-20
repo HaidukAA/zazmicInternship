@@ -1,0 +1,39 @@
+@import '/src/assets/styles/abstracts/variables';
+
+.navigation {
+  flex-direction: column;
+  width: 140px;
+  position: fixed;
+  top: 80px;
+  right: 440px;
+
+  @include flex-center;
+}
+
+.item {
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding: 12px 34px;
+  height: 25px;
+
+  @include font($body-font-family,$font-size-5, $color-5, $font-weight-medium, $line-height-4);
+  @include flex-center;
+   
+
+  &.login {
+    margin-bottom: 32px;
+    width: 72px;
+  }
+
+  &.register {
+    width: 100px;
+    padding: 12px 20px;
+  }
+
+  &.active {
+    color: $color-6;
+    background-color: $color-5;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0 0 10px rgb(229 229 229 / 15%);
+  }
+}

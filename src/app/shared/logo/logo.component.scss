@@ -1,0 +1,20 @@
+@import '/src/assets/styles/abstracts/variables';
+
+.logo__background {
+  background-image: url('/assets/images/svg/logo/background.svg');
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 36px;
+  right: 56px;
+
+  @include box(80, 60);
+}
+
+.logo__text {
+  position: fixed;
+  top: 56px;
+  right: 40px;
+
+  @include box(98, 20);
+  @include font($body-font-family, $font-size-7, $color-6, $font-weight-regular, $line-height-5)
+}

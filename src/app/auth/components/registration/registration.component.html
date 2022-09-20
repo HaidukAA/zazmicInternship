@@ -1,0 +1,51 @@
+<div class="container">
+
+    <div class="container__login-block">
+  
+      <form  [formGroup]="form" name="personalForm" (ngSubmit)="onSubmit()" class="form">
+  
+        <h1 class="form__title" >REGISTER</h1>
+    
+        <app-input
+          class="inputMailField"
+          [groupName]="form" 
+          controlName="mail" 
+          [typeInput]='mail' 
+          [label]='labelMail' 
+          [helperText]='helperMailText'
+          [inputSVG]='mailSVG'
+        ></app-input>
+        <app-input 
+          [groupName]="form" 
+          controlName="password" 
+          [typeInput]='passwordType' 
+          [label]='labelPassword' 
+          [helperText]='helperUserPasswordText'
+          [inputSVG]='passwordSVG'
+          class="password-field"
+        ></app-input>
+        <app-input 
+        [groupName]="form" 
+        controlName="confirmPassword" 
+        [typeInput]='passwordType' 
+        [label]='labelConfirmPassword' 
+        [helperText]='helperConfirmUserPasswordText'
+        [inputSVG]='passwordSVG'
+        class="password-field"
+      ></app-input>
+        
+        <app-button class="button-svg" [buttonSVG]='buttonSVG' [ngClass]="{ 'disabled' : disable }" [typeButton]='typeButton' [name]='button'></app-button>
+  
+        <div *ngIf="passwordMatchError" class="passwordErr">
+          Password does not match
+        </div>
+
+      </form>
+     
+    </div>
+  
+    <app-hello-block></app-hello-block>
+    <app-navigation></app-navigation>
+    <app-logo ></app-logo>
+  </div>
+  

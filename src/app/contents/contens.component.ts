@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContensComponent implements OnInit {
 
+  // tslint:disable-next-line: no-empty
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  // tslint:disable-next-line: no-empty
+  ngOnInit(): void { }
 
 }

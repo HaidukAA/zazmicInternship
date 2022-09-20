@@ -1,0 +1,114 @@
+@import '/src/assets/styles/abstracts/variables';
+
+.input-container {
+  outline: none;
+  border-bottom: 1px solid $color-6;
+  opacity: 60%;
+  padding: 0px;
+  position: relative;
+  font-family: $body-font-family;
+  font-size: $font-size-3;
+  line-height: $line-height-3;
+  background-color: $color-8;
+
+  @include box(344, 56);
+
+  .svg {
+    position: absolute;
+    opacity: 60%;
+    top: 16px;
+    left: 12px;
+  }
+
+  .input {
+    border: none;
+    font-size: $font-size-3;
+    margin: 16px 0 10px;
+    outline: 0;
+    width: 340px;
+    background-color: $color-8;
+  }
+
+  .label {
+    font-size: $font-size-3;
+    position: absolute;
+    transform-origin: top left;
+    transform: translate(0, 16px) scale(1);
+    transition: all .1s ease-in-out;
+    background-color: $color-8;
+    margin-left: 48px;
+  }
+
+  &:hover {
+    background-color: $color-4-transparent;
+    border-bottom: 1px solid $color-1;
+    cursor: pointer;
+
+    .label {
+      background-color: $color-5-transparent;
+      cursor: pointer;
+    }
+
+    .input {
+      background-color: $color-5-transparent;
+      cursor: pointer;
+    }
+  }
+
+  &.active {
+    background-color: $color-4-transparent;
+    color: $color-1;
+    border-bottom: 1px solid $color-1;
+
+    .label {
+      transform: translate(0, 4px) scale(.75);
+      margin-left: 12px;
+      margin-top: 5px;
+      background-color: $color-5-transparent;
+
+      @include font($body-font-family, $font-size-1, $color-1, $font-weight-medium, $line-height-1);
+    }
+
+    .svg {
+      display: none;
+    }
+
+    .input {
+      color: $color-1;
+      font-size: $font-size-3;
+      margin-left: 12px;
+      background-color: $color-5-transparent;
+    }
+  }
+
+  &.dirty {
+
+    .label {
+      transform: translate(0, 4px) scale(.75);
+      margin-left: 12px;
+      margin-top: 5px;
+      background-color: $color-5-transparent;
+
+      @include font($body-font-family, $font-size-1, $color-1, $font-weight-medium, $line-height-1);
+    }
+
+    .input {
+      width: 200px;
+      margin-left: 12px;
+      color: $color-6;
+      line-height: $line-height-3;
+    }
+
+    .svg {
+      display: none;
+    }
+  }
+}
+
+.helper-text {
+  height: 16px;
+  opacity: 73%;
+  margin: 0px;
+
+  @include font($body-font-family, $font-size-1, $color-6, $font-weight-regular, $line-height-1);
+}
