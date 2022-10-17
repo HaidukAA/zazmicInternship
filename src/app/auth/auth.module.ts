@@ -10,8 +10,6 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LogoModule } from '../shared/logo/logo.module';
 import { ButtonModule } from '../shared/button/button.module';
 import { InputModule } from '../shared/input/input.module';
-import {AngularFireModule} from '@angular/fire/compat'
-import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -28,7 +26,6 @@ import { environment } from 'src/environments/environment';
     LogoModule,
     ButtonModule,
     InputModule,
-    AngularFireModule.initializeApp(environment.firebase),
   ],
   exports: [
     HelloBlockComponent,

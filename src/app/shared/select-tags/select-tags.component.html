@@ -1,0 +1,16 @@
+
+ <mat-form-field appearance="fill" [formGroup]="groupName">
+    <mat-label>Select tags</mat-label>
+    <mat-select [(ngModel)]="toppings" multiple formControlName="tags">
+
+      <input class="findTeg" type="text" name="search" [(ngModel)]="searchText" placeholder="Search tags..."  autocomplete="off" 
+      formControlName="tagsSearch">
+
+      <div class="scroll">
+        <mat-option *ngFor="let topping of toppingList | filter:searchText" [value]="topping" >
+            {{topping}}
+            <img [src]="preview" class="preview" />
+        </mat-option>
+      </div>
+    </mat-select>
+  </mat-form-field>

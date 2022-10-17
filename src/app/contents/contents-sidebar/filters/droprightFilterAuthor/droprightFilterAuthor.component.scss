@@ -1,4 +1,4 @@
-@import '/src/assets/styles/abstracts/variables';
+@import '/src/assets/styles/utils/variables';
 
 ::ng-deep .mat-form-field-underline{display: none !important;}
 
@@ -7,6 +7,7 @@
     background: $color-transparent !important;
     border-radius: 12px!important;
     margin: 12px 12px 12px 12px!important;
+    padding: 2px 10px 2px 10px;
     height: 24px !important;
     border: none !important;
     @include font($body-font-family !important, $font-size-2 !important, $color-6 !important, $font-weight-regular !important, $line-height-3 !important);
@@ -100,7 +101,14 @@
     max-width: 240px !important;
     position: relative;
     left: 260px !important;
-    overflow-x: hidden !important;;
+    overflow-x: hidden !important;
+    overflow: hidden!important;
+}
+
+.scroll{
+    height: 200px;
+    overflow-y: scroll!important;
+    overflow-x: hidden !important;
 }
 
 .pages__image {
@@ -167,6 +175,10 @@
 
 ::ng-deep .mat-selected .mat-option-text {
     color: $color-5!important;
+    ::-webkit-scrollbar {
+    display: none !important;
+    background: transparent !important;
+  }
 }
 
 

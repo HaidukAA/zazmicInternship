@@ -1,4 +1,4 @@
-import { Component, Input, AfterViewInit, ElementRef, DoCheck } from '@angular/core';
+import { Component, Input, AfterViewInit, ElementRef, DoCheck, OnInit } from '@angular/core'; 
 
 @Component({
   selector: 'app-input',
@@ -6,7 +6,7 @@ import { Component, Input, AfterViewInit, ElementRef, DoCheck } from '@angular/c
   styleUrls: ['./input.component.scss'],
 })
 
-export class InputComponent implements  AfterViewInit, DoCheck {
+export class InputComponent implements  AfterViewInit, DoCheck, OnInit {
 
   @Input() helperText: string = '';
   @Input() typeInput: string = '';
@@ -20,6 +20,13 @@ export class InputComponent implements  AfterViewInit, DoCheck {
   userName: string = '';
 
   constructor(private el: ElementRef) { }
+
+  
+  ngOnInit():void{
+    console.log(this.helperText)
+    console.log('111')
+    console.log(this.label)
+  }
 
   ngDoCheck(): void {
     const formField = (this.el.nativeElement as HTMLElement).querySelector('input');

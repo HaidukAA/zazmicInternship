@@ -1,0 +1,153 @@
+@import '/src/assets/styles/utils/variables';
+
+
+.input-container {
+  outline: none;
+  border-bottom: 1px solid $color-6;
+  opacity: 60%;
+  padding: 0px;
+  position: relative;
+  font-family: $body-font-family;
+  font-size: $font-size-3;
+  line-height: $line-height-3;
+  background-color: $color-8;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  width: 970px!important;
+  .svg {
+    max-width: 24px;
+    max-height: 24px;
+    overflow: hidden;
+    
+
+  }
+
+  .input {
+    border: none;
+    font-size: $font-size-3;
+    outline: 0;
+    background-color: $color-8;
+  }
+
+  .label {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 120px;
+    font-size: $font-size-3;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: $color-4-transparent;
+    border-bottom: 1px solid $color-1;
+    cursor: pointer;
+
+    .input {
+      background-color: $color-5-transparent;
+      cursor: pointer;
+    }
+  }
+
+  &.active {
+    background-color: $color-4-transparent;
+    color: $color-1;
+    border-bottom: 1px solid $color-1;
+
+    .input {
+      color: $color-1;
+      font-size: $font-size-3;
+     
+      background-color: $color-5-transparent;
+      
+    }
+  }
+
+  &.dirty {
+
+    .input {
+      color: $color-6;
+      line-height: $line-height-3;
+    }
+
+    .label{
+      visibility: hidden!important;
+    }
+      
+    
+
+  }
+}
+
+.helper-text {
+  height: 16px;
+  opacity: 73%;
+  margin: 0px;
+  @include font($body-font-family, $font-size-1, $color-6, $font-weight-regular, $line-height-1);
+}
+
+
+/* File Uploader Styles  */
+
+.uploader {
+ 
+  align-items: center;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  position: relative;
+  height: 180px;
+
+  input {
+    display: none;
+  }
+
+  .icon {
+    color: #eee;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 5em;
+    pointer-events: none;
+  }
+
+  .imgDropped {
+    left: 50%;
+    opacity: 0;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    transition: all 300ms ease-in;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  img.loaded {
+    opacity: 1;
+  }
+}
+
+.labelSmoll{
+  font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+}
+
+ 
+

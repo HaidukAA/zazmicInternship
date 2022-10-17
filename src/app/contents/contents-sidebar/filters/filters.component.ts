@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-filters',
@@ -7,9 +6,5 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filters.component.scss']
 })
 export class FiltersComponent {
-  name = 'sdgsdgsd';
-  // tslint:disable-next-line: no-empty
-  constructor() { }
- // Initialize action items.
- 
+  
 }

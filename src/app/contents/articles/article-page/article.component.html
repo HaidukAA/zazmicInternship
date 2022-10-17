@@ -1,0 +1,43 @@
+
+<div class="container">
+
+    <div class="container_sidebar">
+        <app-contents-sidebar-menu class="container__menu"></app-contents-sidebar-menu>
+        <app-contents-sidebar-user></app-contents-sidebar-user>
+        <app-contents-sidebar-top></app-contents-sidebar-top>
+        <app-contents-sidebar-article-action></app-contents-sidebar-article-action>
+    </div>
+
+    <div *ngIf="article" class="artile_container">
+        
+        <h1>{{article.title}} </h1>
+
+        <app-article-reaction 
+        class="caption_container"
+        [imageUser]='article.imageUser'
+        [nameUser]='article.nameUser'
+        [kudos]='article.kudos'
+        [dataArticle]='article.dataArticle'>
+        </app-article-reaction>
+            
+        <img class="img" src={{article.imageArticle}} alt="model">
+
+        <div class="text">
+            <p>{{article.captionImage}}</p>
+            <p>{{article.paragraph1}}</p>
+            <h2>{{article. title2}}</h2>
+            <p>{{article.paragraph2}}</p>
+            <p>{{article.paragraph3}}</p>
+            <p class="pLast">{{article.paragraph4}}</p>
+        </div>
+            
+        <app-article-reaction 
+        class="caption_container"
+        [imageUser]='article.imageUser'
+        [nameUser]='article.nameUser'
+        [kudos]='article.kudos'
+        [dataArticle]='article.dataArticle'>
+        </app-article-reaction>
+        
+    </div>
+</div>

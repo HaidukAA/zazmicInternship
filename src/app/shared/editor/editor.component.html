@@ -1,0 +1,6 @@
+
+    <div class="input-container" [ngClass]="{ 'active' : isFocused, 'dirty' : dirty }" [formGroup]="groupName">
+        <label class="label">{{label}}</label>
+        <!-- <input class="input" [type]="typeInput" [formControlName]='controlName'/> -->
+        <textarea class="input" [formControlName]='controlName' ></textarea>
+    </div>

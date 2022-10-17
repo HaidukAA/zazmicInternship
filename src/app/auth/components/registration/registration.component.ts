@@ -77,7 +77,8 @@ export class RegistrationComponent implements DoCheck {
     this.localStorege.setToken('token', data);
     this.localStorege.getToken(data);
     console.log('data', data);
-    this.form.reset()
+    this.form.reset();
+    this.router.navigateByUrl('/app/feed?typeView=default');
   }
 
   get passwordMatchError() {

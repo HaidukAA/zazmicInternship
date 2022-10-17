@@ -1,0 +1,44 @@
+@import "/src/assets/styles/utils/variables";
+@import "/src/assets/styles/base/_null.scss";
+
+a{
+    display: flex;
+    background: $color-transparent;
+    border-radius: 12px;
+    padding: 0 12px  0 12px; 
+    margin-right: 8px;  
+    @include font($body-font-family, $font-size-2, $color-6, $font-weight-regular, $line-height-2);
+}
+
+a:hover {
+    background: $color-1;
+    
+}
+
+ .avtorName:hover, h2:hover {
+    background: none;
+    color: $color-1;
+    cursor: pointer;
+}
+
+.avtorName{
+    
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 0;
+    background: none;
+    border-radius: 0;
+    text-align: center;   
+    width: 147px;
+}
+
+.authorImg{ 
+    margin-right: 0px !important;
+    border-radius: 20px!important;
+    padding-right: 0!important;
+    max-width: 40px!important;
+    width: 34px!important;
+    height: 34px!important;   
+}
+

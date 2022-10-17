@@ -1,0 +1,90 @@
+@import '/src/assets/styles/utils/variables';
+
+.input-container {
+  outline: none;
+  opacity: 60%;
+  padding: 0px;
+  position: relative;
+  font-family: $body-font-family;
+  font-size: $font-size-3;
+  line-height: $line-height-3;
+  background-color: $color-8;
+  padding: 0 !important;
+  margin: 0 !important;
+
+
+  .input {
+    display: flex;
+    border: none;
+    font-size: $font-size-3;
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: 0;
+    background-color: $color-8;
+    min-width: 955px!important;
+    min-height: 330px;
+    max-width: 955px!important;
+    max-height: 330px;
+  }
+
+  .label {
+    @include font($body-font-family, $font-size-7, $color-9, $font-weight-medium, $line-height-5);
+    position: absolute;
+    transform-origin: top left;
+    transform: translate(0, 16px) scale(1);
+    transition: all .1s ease-in-out;
+    background-color: $color-8;
+    margin-left: 470px;
+    margin-top: 148px;
+  }
+
+  &:hover {
+    background-color: $color-4-transparent;
+    
+    cursor: pointer;
+
+    .label {
+      background-color: $color-5-transparent;
+      cursor: pointer;
+    }
+
+    .input {
+      background-color: $color-5-transparent;
+      cursor: pointer;
+    }
+  }
+
+  &.active {
+    background-color: $color-4-transparent;
+    color: $color-1;
+   
+
+    .label {
+      display: none;
+    }
+
+    .input {
+      color: $color-1;
+      font-size: $font-size-3;
+      margin-left: 12px;
+      background-color: $color-5-transparent;
+      
+    }
+  }
+
+  &.dirty {
+
+    .label {
+      display: none;
+    }
+
+    .input {
+      margin-left: 12px;
+      color: $color-6;
+      line-height: $line-height-3;
+    }
+
+
+  }
+}
+

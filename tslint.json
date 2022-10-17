@@ -18,8 +18,12 @@
         "array-type": false,
         "no-namespace": false,
         "no-misused-new": false,
-        "disable-next-line": false
-    },
-    "rulesDirectory": []
+        "disable-next-line": false,
+        "no-var-keyword": true,
+        "variable-name": false
+         
+
+    }
+    
     
 } 

@@ -1,4 +1,4 @@
-@import "/src/assets/styles/abstracts/variables";
+@import "/src/assets/styles/utils/variables";
 @import "/src/assets/styles/base/_null.scss";
 
 .feedBlokTitlesView{
@@ -98,18 +98,14 @@
     display: flex;
 }
 
-a{
-    display: flex;
-    background: $color-transparent;
-    border-radius: 12px;
-    padding: 0 12px  0 12px; 
-    margin-right: 8px;  
-    @include font($body-font-family, $font-size-2, $color-6, $font-weight-regular, $line-height-2);
+
+.buttonLoad:hover {
+    background: $color-1;  
 }
 
-a:hover, .buttonLoad:hover {
-    background: $color-1;
-    
+a:hover {
+    background: $color-1;  
+    cursor: pointer;
 }
 
 h2{

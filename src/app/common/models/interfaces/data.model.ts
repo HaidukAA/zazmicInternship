@@ -1,11 +1,11 @@
 export interface IArticle {
-  id: number
+  id?: number
   title?: string
-  tags?: {
+  tags: {
     tagOne: string
     tagTwo: string
   }
-  imageUser?: string
+  imageUser: string
   nameUser?: string
   dataArticle?: string
   kudos?: number

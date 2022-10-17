@@ -4,10 +4,10 @@ import { SidebarModule } from './contents-sidebar/sidebar.module';
 import { ContentsRoutingModule } from './contents-routing.module';
 import { ContensComponent } from './contens.component';
 import { RouterModule } from '@angular/router';
-import { articles } from '../common/models/moockdata/data.moock';
 import { ArticlesModule } from './articles/articles.module';
 
 import {MatNativeDateModule} from '@angular/material/core';
+
 
 @NgModule({
   declarations: [ContensComponent],
@@ -17,7 +17,7 @@ import {MatNativeDateModule} from '@angular/material/core';
     ContentsRoutingModule,
     RouterModule,
     ArticlesModule,
-    MatNativeDateModule
+    MatNativeDateModule,
   ]
 })
 export class ContentsModule { }

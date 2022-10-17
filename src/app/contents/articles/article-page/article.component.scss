@@ -1,0 +1,186 @@
+@import "/src/assets/styles/utils/variables";
+@import "/src/assets/styles/base/_null.scss";
+
+.container{
+    display: flex;
+    max-width: 1440px;
+    margin: 0px auto;
+}
+
+.container__menu {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $color-6-transparent;
+  }
+
+.container_sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 240px;
+    background-color:  $color-5;
+    box-shadow: 0 0 10px $color-1-transparent;
+  }
+
+  .artile_container{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    max-width: 1000px;
+    top: 0px;
+    padding-left: 104px;
+    filter: $shadow;
+  }
+
+/*------------HEADER--------------------------------------------------------------------------------------------*/
+h1{
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 50px;
+    filter: $shadow;
+ 
+}
+
+.caption_container{ 
+    display: flex;
+    align-items: flex-end;   
+    justify-content: space-between;
+    margin-bottom: 2px;
+    min-width: 922px !important;
+}
+
+.caption_container:last-child{ 
+  margin-bottom: 500px;
+}
+
+
+/*------------MAIN--------------------------------------------------------------------------------------------*/
+
+.img{
+    display: flex;
+    max-width: 992px;
+}
+
+p{
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 150%;
+    padding-bottom: 24px;
+}
+.pLast{
+
+    padding-bottom: 0px;
+}
+
+h2{
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 150%;
+    padding: 40px 0 24px 0;
+}
+
+a:hover, .buttonLoad:hover {
+    background: $color-1;
+    
+}
+
+.reactionsImg:hover {
+    background:$color-1;
+    border-radius: 100%;
+
+}
+
+ .avtorName:hover {
+    background: none;
+    color: $color-1;
+    cursor: pointer;
+}
+
+
+/*-------------MEDIA--------------------------------------------------------------------*/
+
+
+@media only screen and (max-width : 991px) {
+   
+    h1, h2{
+        font-size: 26px;
+}
+
+    p, .avtorName{ font-size: 16px; }
+
+    .caption_container{
+        display: block;
+    }
+   
+   
+    .caption_container{
+        display: block;
+    }
+
+    .authorImg{
+        
+        width: 24px;
+        height: 24px;
+
+    }
+
+    .reactions{
+        justify-content: start;
+        padding-left: 0px;
+    }
+
+    .reactionsText{
+        font-size: 16px;
+        padding-left: 0px;
+    }
+
+    .reactionsImg{
+        width: 18px;
+        height: 15px;  
+        margin-right: 8px;
+    }
+	
+
+}
+
+@media only screen and (max-width : 767px) {
+
+    h1, h2{font-size: 14px;
+          line-height: 20px;}
+
+    p, .avtorName{ font-size: 12px; }
+
+    .caption_container{
+        display: block;
+    }
+
+    .authorImg{
+        width: 24px;
+        height: 24px;
+
+    }
+
+    .reactions{
+        justify-content: start;
+        padding-left: 0px;
+    }
+
+    .reactionsText{
+        font-size: 12px;
+        padding-left: 0px;
+    }
+
+    .reactionsImg{
+        
+        width: 18px;
+        height: 15px;  
+        margin-right: 8px;
+        
+    }
+
+    footer{
+        margin: 80px auto 16px auto;
+    }
+}

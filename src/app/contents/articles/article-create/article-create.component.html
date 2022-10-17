@@ -1,0 +1,66 @@
+<div class="container">
+
+    <div class="container_sidebar">
+        <app-contents-sidebar-menu class="container__menu"></app-contents-sidebar-menu>
+        <app-contents-sidebar-user></app-contents-sidebar-user>
+        <app-contents-sidebar-top></app-contents-sidebar-top>
+    </div>
+
+  
+    <form class="artile_container" [formGroup]="formGroup" name="personalForm" *ngIf="formGroup" (ngSubmit)="onSubmit()">
+        <h1>Create new article</h1>
+
+        <app-input 
+        [groupName]="formGroup"
+        controlName="title" 
+        [typeInput]='titleType' 
+        [label]='labelTitle' 
+        [helperText]='helperTitleText'
+        class="input-field input-createArticle"
+        ></app-input>
+     
+        <app-input 
+        [groupName]="formGroup"
+        controlName="annotation" 
+        [typeInput]='annotationType' 
+        [label]='labelAnnotation' 
+        [helperText]='helperAnnotationText'
+        class="input-field input-createArticle"
+        ></app-input>
+
+        <app-editor    
+        [groupName]="formGroup"   
+        controlName="editor" 
+        [typeInput]='editorType' 
+        [label]='labeleditor' 
+        class="input-field-editor">
+        </app-editor>
+        
+        <app-image-editor 
+        [groupName]="formGroup" 
+        [activeColor]="'orangered'" 
+        controlName="IMGeditor" 
+        [baseColor]="'lightgray'"
+        [label]='labelImageEdit' 
+        [inputSVG]='inputSVGImageEdit' 
+        [helperText]=' helperImageEditText'
+        class="input-field-image-editor">
+        </app-image-editor>
+
+        <app-select-tags
+        [groupName]="formGroup" 
+        controlName="tags" 
+        class="input-field-editor tegs-editor"
+        ></app-select-tags>
+
+        <div class="button_container"> 
+            <app-button class="button-svg" [buttonSVG]='buttonSVGCancel' [typeButton]='typeButtonCancel' [name]='buttonCancel'></app-button>
+            <app-button class="button-svg" [buttonSVG]='buttonSVG' [ngClass]="{ 'disabled' : disable }" [typeButton]='typeButton' [name]='button'></app-button>
+        </div>
+       
+    </form>
+
+</div>
+
+
+

@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { articles } from 'src/app/common/models/moockdata/data.moock';
 
 @Component({
   selector: 'app-artiles-feed',
@@ -9,24 +8,19 @@ import { articles } from 'src/app/common/models/moockdata/data.moock';
 })
 export class ArtilesFeedComponent implements OnInit {
 
-  
   typeView='default';
   
-
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      console.log(params)
       // tslint:disable-next-line: no-string-literal
       this.typeView=this.getClass(params['typeView'])
-      console.log(this.typeView)
     })
 
   }
 
   getClass(view: string) {
-    console.log(view)
     switch(view) {
         case 'titles':
             return 'cards';

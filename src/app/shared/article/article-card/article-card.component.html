@@ -10,7 +10,10 @@
         </div>
             
         <div>
-            <h2 >{{ article.title }}</h2>  
+            <a routerLink="/app/articles/id" routerLinkActive="active">  
+                <h2>{{ article.title }}</h2>  
+            </a>
+          
             <p>{{ article.caption }}</p>
         </div>
                     

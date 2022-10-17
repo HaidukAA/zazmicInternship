@@ -1,23 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input} from '@angular/core';
+
 
 @Component({
   selector: 'app-article-reaction',
   templateUrl: './article-reaction.component.html',
   styleUrls: ['./article-reaction.component.scss']
 })
-export class ArticleReactionComponent implements OnInit {
+export class ArticleReactionComponent {
 
 
   @Input() imageUser?: string
   @Input() nameUser?: string
   @Input() kudos?: number
-
-  // tslint:disable-next-line: no-empty
-  constructor() { }
-
-  // tslint:disable-next-line: no-empty
-  ngOnInit(): void {
-  
-  }
+  @Input() dataArticle?: string
 
 }

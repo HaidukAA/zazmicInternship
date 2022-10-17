@@ -8,18 +8,5 @@ import { Component, Input } from '@angular/core';
 export class TagsComponent {
 
   @Input() name?: string
-  
-
-  // tslint:disable-next-line: no-empty
-  constructor() { }
-
-  ngOnInit(): void {
-   
-      console.log("Tegs", this.name)
-  }
-      
-   
-    
-
 
 }

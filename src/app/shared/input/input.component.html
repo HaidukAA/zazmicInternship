@@ -1,6 +1,6 @@
 <div class="input-container" [ngClass]="{ 'active' : isFocused, 'dirty' : dirty }" [formGroup]="groupName">
   <label class="label">{{ label }}</label>
-  <img class="svg" [src]="inputSVG"/>
+  <img class="svg" *ngIf="inputSVG" [src]="inputSVG"/>
   <input class="input" [type]="typeInput" [formControlName]='controlName'/>
 </div>
 <p class="helper-text">{{ helperText }}</p>

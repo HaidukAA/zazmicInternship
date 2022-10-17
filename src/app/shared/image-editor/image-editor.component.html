@@ -1,0 +1,35 @@
+
+<form class="input-container" [ngClass]="{ 'active' : isFocused, 'dirty' : dirty }" [formGroup]="groupName"> 
+
+  <label class="uploader" ondragover="return false;" 
+    [class.loaded]="loaded" 
+    [style.outlineColor]="dragging ? activeColor : baseColor"
+    (dragenter)="handleDragEnter()"
+    (dragleave)="handleDragLeave()"
+    (drop)="handleDrop($event)">
+
+    <ul class="label"  [ngClass]="{ 'dirty' : dirty }">
+      <img class="svg" *ngIf="inputSVG" [src]="inputSVG"/>
+      <label> Drag image here</label> 
+      <label class="labelSmoll"> or</label> 
+      <label class="labelSmoll">click to select</label> 
+    </ul>
+
+
+    <i class="icon icon-upload glyphicon glyphicon-upload" 
+        [style.color]="dragging 
+            ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+            : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+    
+    <img class="imgDropped"
+        [src]="imageSrc" 
+        (load)="handleImageLoad()" 
+        [class.loaded]="imageLoaded"/> 
+   
+    <input class="notVisual" type="file" formControlName="IMGeditor" name="file" accept="image/*"
+        (change)="handleInputChange($event)" >
+  </label>
+
+</form>
+
+<p class="helper-text">{{ helperText }}</p>

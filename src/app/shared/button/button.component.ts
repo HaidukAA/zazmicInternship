@@ -11,8 +11,4 @@ export class ButtonComponent {
   @Input() name: string = '';
   @Input() typeButton: string = '';
   @Input() buttonSVG: string = '';
-
-  // tslint:disable-next-line: no-empty
-  constructor() { }
-
 }

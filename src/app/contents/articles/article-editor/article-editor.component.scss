@@ -1,0 +1,91 @@
+@import "/src/assets/styles/utils/variables";
+@import "/src/assets/styles/base/_null.scss";
+
+.container{
+    display: flex;
+    max-width: 1440px;
+}
+
+.container__menu {
+    display: flex;
+    align-items: center!important;
+    border-bottom: 1px solid $color-6-transparent;
+  }
+
+  .tegs-editor{
+    display: flex;
+    height: 100px!important;
+  }
+
+.container_sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 240px;
+    background-color:  $color-5;
+    box-shadow: 0 0 10px $color-1-transparent;
+  }
+
+  .artile_container{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    max-width: 1000px;
+    top: 0px;
+    padding-left: 104px;
+  }
+
+  h1{
+    margin-top: 72px;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 50px;
+    /* identical to box height */
+    color: #313131;
+    margin-bottom: 40px;
+}
+
+.input-field{
+    min-width: 992px!important;
+    background: $color-5;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 12px 12px 12px 12px;
+    margin-bottom: 30px;
+}
+
+
+.input-field-editor{
+    min-width: 992px!important;
+    background: $color-5;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 12px 12px 12px 12px;
+    margin-bottom: 30px;
+}
+
+.input-field-image-editor{
+  min-width: 992px!important;;
+  min-height: 190px!important;;
+  background: $color-5;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 12px 12px 12px 12px;
+  margin-bottom: 30px;
+}
+
+.button_container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.tags_container {
+  margin-left: 10px;
+  display: flex;
+}

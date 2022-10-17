@@ -60,8 +60,10 @@ export class LoginComponent implements DoCheck {
     this.localStorege.setToken('token', data);
     this.localStorege.getToken(data);
     console.log('data', data);
-    this.form.reset()
-  }
-  
+    this.localStorege.isAuthenticate();
+    this.router.navigateByUrl('/app/feed?typeView=default');
+    this.form.reset();
+    
 
+  }
 }

@@ -8,12 +8,13 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   isLoggedIn = false;
+ 
   // tslint:disable-next-line: no-empty
-  constructor() { }
+  constructor(private router: Router) { }
 
   public setToken(token: string, value: string): void {
     try {
-    localStorage.setItem(token, value);
+    localStorage.setItem( token, JSON.stringify(value));
     } 
     catch (e) {
       console.error('Error saving to localStorage', e);
@@ -22,13 +23,15 @@ export class AuthService {
 
   public getToken(token: string) {
     try { 
-    return localStorage.getItem(token);
+    return localStorage.getItem(JSON.stringify(token));
     }
     catch (e) {
       console.error('Error getting data from localStorage', e);
       return null;
     }
   }
+
+  
 
   public removeToken(token: string) {
     localStorage.removeItem(token);
@@ -47,6 +50,6 @@ export class AuthService {
   public clearToken() {
     localStorage.clear();
   }
-
+  
 
 }

@@ -7,7 +7,7 @@
 
     <mat-select multiple  [formControl]="toppings" panelClass="select-panel">    
 
-      <input matInput placeholder="Search tags..." class="findTeg">
+      <input class="findTeg" type="text" name="search" [(ngModel)]="searchText" placeholder="Search tags..."  autocomplete="off">
 
       <div class="line"></div>
 
@@ -17,8 +17,11 @@
           (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
         </span>
       </mat-select-trigger>
-      <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
-     
+
+      <div class="scroll">
+        <mat-option *ngFor="let topping of toppingList | filter:searchText" [value]="topping">{{topping}}</mat-option>
+      </div>
+
       <div class="line"></div>
 
       <div class="button_container">
@@ -26,8 +29,6 @@
         <a class="button">SAVE FILTERS</a>
       </div>
 
-      
-     
     </mat-select>
 
   </mat-form-field>

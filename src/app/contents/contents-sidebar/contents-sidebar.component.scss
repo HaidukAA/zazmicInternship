@@ -1,4 +1,4 @@
-@import '/src/assets/styles/abstracts/variables';
+@import '/src/assets/styles/utils/variables';
 
 
 .container {
@@ -7,7 +7,7 @@
   height: 100%;
   width: 240px;
   background-color:  $color-5;
-  box-shadow: 0 0 10px rgb(229 229 229 / 5%);
+  box-shadow: 0 0 10px $color-1-transparent;
 }
 
 

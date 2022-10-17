@@ -16,6 +16,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button'
 import { DroprightFilterAuthorComponent } from './filters/droprightFilterAuthor/droprightFilterAuthor.component';
+import { ContentsSidebarArticleActionComponent } from './contents-sidebar-article-action/contents-sidebar-article-action.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,8 @@ import { DroprightFilterAuthorComponent } from './filters/droprightFilterAuthor/
     ContentsSidebarTopComponent,
     ContentsSidebarUserComponent,
     DroprightComponent,
-    DroprightFilterAuthorComponent
-    
+    DroprightFilterAuthorComponent,
+    ContentsSidebarArticleActionComponent
   ],
   imports: [
     CommonModule,
@@ -38,10 +40,17 @@ import { DroprightFilterAuthorComponent } from './filters/droprightFilterAuthor/
     MatFormFieldModule,
     MatSelectModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    Ng2SearchPipeModule,
+    FormsModule
   ],
   exports: [
     ContentsSidebarComponent,
+    ActionsComponent,
+    ContentsSidebarMenuComponent,
+    ContentsSidebarUserComponent,
+    ContentsSidebarTopComponent,
+    ContentsSidebarArticleActionComponent
   ],
   
 })
