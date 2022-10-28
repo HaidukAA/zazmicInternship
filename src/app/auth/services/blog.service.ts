@@ -4,12 +4,13 @@ import { IArticle } from 'src/app/common/models/interfaces/data.model';
 import { AngularFirestore } from "@angular/fire/compat/firestore";
 import { map } from "rxjs/operators";
 import { Observable } from "rxjs";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: "root",
 })
 export class BlogService {
-  constructor(private db: AngularFirestore) {}
+  constructor(private db: AngularFirestore, private http: HttpClient) {}
 
   createPost(post: IArticle) {
     const postData = JSON.parse(JSON.stringify(post));
@@ -44,5 +45,9 @@ export class BlogService {
 
   deletePost(postId: number) {
     return this.db.doc("articles/" + postId).delete();
+  }
+
+  getArticles() {
+    return this.http.get('/api/articles');
   }
 }

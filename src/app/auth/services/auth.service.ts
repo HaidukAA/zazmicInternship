@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
@@ -10,7 +11,7 @@ export class AuthService {
   isLoggedIn = false;
  
   // tslint:disable-next-line: no-empty
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) {  }
 
   public setToken(token: string, value: string): void {
     try {
@@ -51,5 +52,4 @@ export class AuthService {
     localStorage.clear();
   }
   
-
 }
