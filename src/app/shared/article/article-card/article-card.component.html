@@ -10,7 +10,8 @@
         </div>
             
         <div>
-            <a routerLink="/app/articles/id" routerLinkActive="active">  
+            
+            <a [routerLink]='["/app/articles", article.id]' routerLinkActive="active">  
                 <h2>{{ article.title }}</h2>  
             </a>
           

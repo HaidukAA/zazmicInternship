@@ -2,7 +2,7 @@
 
   <mat-label><img class="pages__image" src="/assets/images/svg/sidebar/Byauthor.svg"/>By tegs</mat-label>
 
-  <mat-select multiple  [formControl]="toppings" disableOptionCentering panelClass="select-panel">    
+  <mat-select #matSelect multiple  [formControl]="toppings" disableOptionCentering panelClass="select-panel">    
 
     <input class="findTeg" type="text" name="search" [(ngModel)]="searchText" placeholder="Search tags..."  autocomplete="off">
 
@@ -23,8 +23,8 @@
     <div class="line"></div>
 
     <div class="button_container">
-      <a class="button">RESET ALL</a>
-      <a class="button">SAVE FILTERS</a>
+      <a class="button" (click)="matSelect.close()">RESET ALL</a>
+      <a class="button" (click)="matSelect.close()">SAVE FILTERS</a>
     </div>
    
   </mat-select>

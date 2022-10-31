@@ -6,7 +6,7 @@ import { Component, Input, AfterViewInit, ElementRef, DoCheck, OnInit } from '@a
   styleUrls: ['./input.component.scss'],
 })
 
-export class InputComponent implements  AfterViewInit, DoCheck, OnInit {
+export class InputComponent implements  AfterViewInit, DoCheck{
 
   @Input() helperText: string = '';
   @Input() typeInput: string = '';
@@ -21,12 +21,6 @@ export class InputComponent implements  AfterViewInit, DoCheck, OnInit {
 
   constructor(private el: ElementRef) { }
 
-  
-  ngOnInit():void{
-    console.log(this.helperText)
-    console.log('111')
-    console.log(this.label)
-  }
 
   ngDoCheck(): void {
     const formField = (this.el.nativeElement as HTMLElement).querySelector('input');

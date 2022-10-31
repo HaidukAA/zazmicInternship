@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/services/auth.service';
 import { IArticle } from 'src/app/common/models/interfaces/data.model';
 import { articles } from 'src/app/common/models/moockdata/data.moock';
 import { ArticlesService } from 'src/app/services/article.service';
+
 
 // import { ServiceArticleFireService } from 'src/app/services/service-article-fire.service'
 
@@ -16,7 +18,7 @@ export class ArticleEditorComponent implements OnInit{
   
   articles=articles;
   article: IArticle | undefined;
-
+  
   form: UntypedFormGroup;
   
   labelTitle = 'Title';
@@ -48,7 +50,9 @@ export class ArticleEditorComponent implements OnInit{
 
   // tslint:disable-next-line: no-empty
   constructor(private route: ActivatedRoute, 
+    private router : Router,
     // private service: ServiceArticleFireService, 
+    private localStorege:  AuthService,
     private articleService: ArticlesService)
     
   { this.form = new UntypedFormGroup({
@@ -102,25 +106,31 @@ export class ArticleEditorComponent implements OnInit{
   }
 
   submit() {
+    const data = this.form.value;
+
     this.articleService.create({
       title: this.form.value.title as string,
       tags: {
-        tagOne: 'Data Sciense',
-        tagTwo: 'Artificial Intelligence'
+        tagOne: '',
+        tagTwo: ''
       },
-      imageUser: '/assets/images/user-images/tyler.png',
-      nameUser: 'TYLER FOLKMAN',
-      dataArticle: 'November 29, 2019',
-      kudos: 147,
-      imageArticle: '/assets/images/feed/Image.png',
-      title2: 'Trust',
-      caption: 'I would like to add another technique to your toolkit — confidence intervals.',
-      captionImage: '“Can I trust your model?”',
-      paragraph1: 'It is the first thing your manager asks as you present your latest work. How do you answer? Do you refer to the mean squared error? the R² coefficient? How about some example results? These are all great, but I would like to add another technique to your toolkit — confidence intervals.',
-      paragraph2: 'At the end of the day, one of the most important jobs any data scientist has is to help people trust an algorithm that they most likely don’t completely understand.',
-      paragraph3: 'One way to help build this trust is to add confidence intervals to your model\'s predictions. We will define confidence intervals for this article as a way of quantifying the uncertainty of an estimate. This tends to be easier for classification problems. Most algorithms provide probability estimates which can serve as confidence scores. For example, a 90% probability of being a cat should be more confident than a 50% probability.',
-      paragraph4: 'For regression problems, though, things tend to get trickier. Most algorithms don’t have a natural way of providing a confidence or probability score. There are many solutions to this problem, one of my favorite being Bayesian models, but I would like to discuss the simplest and easiest method to implement for any machine learning model.',
+      imageUser: ''
     })
-  }
 
+  
+  if (this.form.invalid) {
+    return;
+  }
+  this.localStorege.clearToken();
+  this.localStorege.removeToken(data);
+  this.localStorege.setToken('token', data);
+  this.localStorege.getToken(data);
+  console.log('data', data);
+  this.form.reset()
+
+  const routeParams = this.route.snapshot.paramMap;
+  const articleIdFromRoute = Number(routeParams.get('articleId'));
+  this.router.navigate(["/app/articles", articleIdFromRoute]);
+  
+  }
 }

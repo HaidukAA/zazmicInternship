@@ -5,7 +5,7 @@
         <app-contents-sidebar-menu class="container__menu"></app-contents-sidebar-menu>
         <app-contents-sidebar-user></app-contents-sidebar-user>
         <app-contents-sidebar-top></app-contents-sidebar-top>
-        <app-contents-sidebar-article-action></app-contents-sidebar-article-action>
+        <app-contents-sidebar-article-action [id]='article?.id'></app-contents-sidebar-article-action>
     </div>
 
     <div *ngIf="article" class="artile_container">

@@ -16,10 +16,10 @@ export class ArticleCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      console.log(this.articles[0])
+    
       // tslint:disable-next-line: no-string-literal
       this.typeView=this.getClass(params['typeView'])
-      console.log(this.typeView)
+    
     })
 
   }
@@ -27,7 +27,7 @@ export class ArticleCardComponent implements OnInit {
 
 
   getClass(view: string) {
-    console.log(view)
+    
     switch(view) {
         case 'titles':
             return 'feedBlokTitlesView';

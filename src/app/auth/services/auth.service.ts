@@ -14,22 +14,15 @@ export class AuthService {
   constructor(private router: Router, private http: HttpClient) {  }
 
   public setToken(token: string, value: string): void {
-    try {
+
     localStorage.setItem( token, JSON.stringify(value));
-    } 
-    catch (e) {
-      console.error('Error saving to localStorage', e);
-    }
+    
   }
 
   public getToken(token: string) {
-    try { 
+    
     return localStorage.getItem(JSON.stringify(token));
-    }
-    catch (e) {
-      console.error('Error getting data from localStorage', e);
-      return null;
-    }
+    
   }
 
   

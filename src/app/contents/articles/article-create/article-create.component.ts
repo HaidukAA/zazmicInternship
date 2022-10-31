@@ -46,7 +46,7 @@ export class ArticleCreateComponent implements DoCheck{
   disableCancel: boolean = true;
   buttonSVGCancel = 'assets/images/svg/Close.svg';
 
-
+  formSubmitted = false;
   // tslint:disable-next-line: no-empty
   constructor(private route: ActivatedRoute,
     private articleService: ArticlesService,
@@ -60,23 +60,15 @@ export class ArticleCreateComponent implements DoCheck{
     ]),
     annotation: new UntypedFormControl('', [
       Validators.required,
-      Validators.minLength(10)
+      Validators.minLength(3)
     ]),
-    editor: new UntypedFormControl('', [
-      Validators.required,
-      Validators.minLength(70)
-    ]),
+    editor: new UntypedFormControl(''),
     tags: new UntypedFormControl([]),
     IMGeditor: new UntypedFormControl(''),
     tagsSearch: new UntypedFormControl('')
   });   
   }
 
- 
-
-  get title() {
-    return this.formGroup.controls.title as UntypedFormControl
-  }
 
 
   ngDoCheck(): void {
@@ -87,7 +79,13 @@ export class ArticleCreateComponent implements DoCheck{
     }
   }
 
+  validationErrorExists() {
+    return ((this.formSubmitted || this.formGroup.dirty) && !this.formGroup.valid);
+  }
+
   onSubmit(){
+
+    this.formSubmitted = true;
     const data = this.formGroup.value;
 
     this.articleService.create({
@@ -113,6 +111,8 @@ export class ArticleCreateComponent implements DoCheck{
   
   } 
 
-
+  public hasError = (controlName: string, errorName: string) => {
+    return this.formGroup.controls[controlName].hasError(errorName);
+  }
 }
 

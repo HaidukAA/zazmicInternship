@@ -36,6 +36,7 @@
     border-radius: 12px !important; 
     padding: 0 8px 0 8px!important;
     @include font($body-font-family, $font-size-2, $color-6, $font-weight-regular, $line-height-3);
+    cursor: default;
 }
 
 ::ng-deep .pages-item{ 

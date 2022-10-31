@@ -18,7 +18,7 @@
         [helperText]='helperTitleText'
         class="input-field input-createArticle"
         ></app-input>
-     
+        
         <app-input 
         [groupName]="formGroup"
         controlName="annotation" 
@@ -27,8 +27,8 @@
         [helperText]='helperAnnotationText'
         class="input-field input-createArticle"
         ></app-input>
-
         <app-editor    
+
         [groupName]="formGroup"   
         controlName="editor" 
         [typeInput]='editorType' 
@@ -52,6 +52,13 @@
         controlName="tags" 
         class="input-field-editor tegs-editor"
         ></app-select-tags>
+
+        <div *ngIf="validationErrorExists();"  class="error">
+            <div *ngIf="hasError('title', 'required')">Title is required</div>
+            <div *ngIf="hasError('title', 'maxlength')">You have more than 70 characters in Title</div>
+            <div *ngIf="hasError('annotation', 'required')">Annotation is required</div>
+            <div *ngIf="hasError('annotation', 'minlength')">Minimum length is 3 character in Annotation</div>
+        </div>
 
         <div class="button_container"> 
             <app-button class="button-svg" [buttonSVG]='buttonSVGCancel' [typeButton]='typeButtonCancel' [name]='buttonCancel'></app-button>

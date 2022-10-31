@@ -32,7 +32,8 @@ export class LoginComponent implements DoCheck {
     this.form = new UntypedFormGroup({
       name: new UntypedFormControl('', [
         Validators.required,
-        Validators.maxLength(40)
+        Validators.maxLength(40),
+        Validators.email
       ]),
       password: new UntypedFormControl('', [
         Validators.required,
